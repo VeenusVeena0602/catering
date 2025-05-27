@@ -107,6 +107,15 @@
   .form .button {
     max-width: max-content;
     color: #000 !important;
+    background-color: #f1f1f1 !important;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .form .button:hover {
     background-color: #ccc !important;
   }
 }

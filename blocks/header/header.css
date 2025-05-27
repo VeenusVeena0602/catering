@@ -1,9 +1,16 @@
-/* header and nav layout */
+/* header and nav layout **/
 header .nav-wrapper {
-  background-color: var(--background-color);
-  width: 100%;
-  z-index: 2;
-  position: fixed;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    font-weight: 200;
 }
 
 header nav {
@@ -50,11 +57,26 @@ header nav p {
   line-height: 1;
 }
 
-header nav a:any-link {
-  color: currentcolor;
+header nav a{ 
+  letter-spacing: 4px;
 }
 
-/* hamburger */
+header nav a:any-link {
+  color: currentcolor;
+  font-weight: 200;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+
+header nav a:hover{
+  text-decoration: none;
+  color: #000 !important;
+  background-color: #ccc !important;
+  white-space: normal; 
+}
+
+
+/* hamburger **/
 header nav .nav-hamburger {
   grid-area: hamburger;
   height: 22px;
@@ -138,9 +160,9 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: auto;
   font-size: var(--heading-font-size-s);
-  font-weight: 700;
+  font-weight: unset;
   line-height: 1;
 }
 
@@ -155,12 +177,14 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
+ 
 }
 
 header nav[aria-expanded='true'] .nav-sections {
-  display: block;
   visibility: visible;
   align-self: start;
+  display: flex;
+  justify-content: end;
 }
 
 header nav .nav-sections ul {
@@ -227,6 +251,12 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+  }
+
+  header nav .nav-sections .default-content-wrapper {
+    color: #000 !important;
+    background-color: #fff !important;
+    letter-spacing: 4px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {

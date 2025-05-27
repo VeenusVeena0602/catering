@@ -41,6 +41,10 @@
   }
 }
 
+.form .label {
+  display: none;
+}
+
 .form label,
 .form fieldset > legend {
   margin-bottom: 0.25em;
